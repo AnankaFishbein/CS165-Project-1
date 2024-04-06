@@ -1,0 +1,4 @@
+current pwd length = 4
+curr pwd = abcd
+curr salt = hfT7jp2q
+curr hash = $1$hfT7jp2q$HtyOYVTSrJkX3GxpxXJY50
