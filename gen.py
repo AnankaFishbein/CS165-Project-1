@@ -5,13 +5,22 @@ from passlib.hash import md5_crypt
 from multiprocessing import Pool, cpu_count
 import time
 
-
 salt = '$1$zxHxP/cZ$'
 
-givenPassHash = '$1$zxHxP/cZ$9M9AoyLzpPza73./bvfsJ/'
+testPass = 'aabbbb'
+
+testHash = crypt.crypt(testPass, salt)
+
+print(testHash)
+
+givenPassHash = '$1$zxHxP/cZ$80hJZst.xa/IE2UbrZ/.m1'
+
+startTime = time.time()
+
+totalPassCalc = 0
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-alphabet_starting_C = alphabet[alphabet.index('d'):]
+alphabet_starting_C = alphabet[alphabet.index('c'):]
 passwordLength = range(6, 7)
 
 startTime = time.time()
@@ -19,7 +28,7 @@ startTime = time.time()
 totalPassCalc = 0
 
 for length in passwordLength: 
-    passwords = itertools.product(alphabet_starting_C, repeat=length)
+    passwords = itertools.product(alphabet, repeat=length)
     for password in passwords: 
         totalPassCalc += 1
         passwordStr = ''.join(password)
