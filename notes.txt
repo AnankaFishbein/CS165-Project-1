@@ -1,7 +1,7 @@
-current pwd length = 4
-curr pwd = abcd
-curr salt = hfT7jp2q
-curr hash = $1$hfT7jp2q$HtyOYVTSrJkX3GxpxXJY50
+# Given hash string to test against
+given_hash = "9M9AoyLzpPza73./bvfsJ/"
+# Given salt
+given_salt = "$1$zxHxP/cZ$"
 
 Citation:
 https://stackoverflow.com/a/66029977 for passward permutation with repetition generation method
